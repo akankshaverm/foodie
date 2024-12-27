@@ -26,27 +26,22 @@ const page =  async({params}) => {
 
   }
   return (
-    <div className=' flex flex-1 h-screen'>
-      {!sesion && <Login/>}
+    <div className=" flex flex-1 h-screen">
+      {!sesion && <Login />}
 
       {sesion && (
         <>
-        <SidebarIcons/>
-      <Suspense fallback={<LoadingUI/>}>
-      <MainContainer callingDish={callingDish}/>
-      </Suspense>
-      <Suspense fallback={<LoadingUI/>}>
-      <OrderContainer/>
-      </Suspense>
+          <SidebarIcons />
+          <Suspense fallback={<LoadingUI />}>
+            <MainContainer callingDish={callingDish} />
+          </Suspense>
+          <Suspense fallback={<LoadingUI />}>
+            <OrderContainer />
+          </Suspense>
         </>
-      )
-      }
-
-      
-      
-      
+      )}
     </div>
-  )
+  );
 }
 
 export default page

@@ -2,12 +2,11 @@ import categoryModel from "@/models/categoryModel";
 import DbConnect from "@/utils/DbConnect";
 import Link from "next/link"
 
-
-
-const CategoryItem = ({Icon,label,id}) => {
+const CategoryItem = ({label,id}) => {
   
     return(
-        <Link href={id?`/${id}` : "/"} className="flex flex-1 px-3  justify-center items-center gap-2 box-border py-2  hover:bg-orange-500 hover:text-white ">
+        <Link href={id?`/${id}` : "/"} className="flex flex-1 px-3  justify-center items-center gap-2 
+        box-border py-2  hover:bg-orange-500 hover:text-white ">
             {/*<Icon className=" w-4 h-4 text-red-500"/>*/}
             <h5 className=" text-lg  capitalize font-medium">{label}</h5>
 
